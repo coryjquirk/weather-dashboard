@@ -1,0 +1,82 @@
+.header {
+    height: 100px;
+    background-color: rgb(53, 53, 53);
+    margin: -8px;
+}
+
+#title {
+    color: rgb(150, 245, 150);
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    font-size: 50px;
+}
+
+/* working w divs */
+.container {
+    margin: 0px 0px 0px 0px;
+    max-width: none;
+}
+
+#citycolumn {
+    background-color: rgb(233, 176, 176);
+    margin: 10px 10px 10px 10px;
+}
+
+#citysearch {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+#citylist {
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(182, 238, 182);
+}
+
+#cityboxes {
+    height: 60px;
+    padding: 15px 15px 15px 15px;
+    background-color: rgb(182, 238, 182);
+    border: 1px solid black;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+}
+
+
+#rightside {
+    background-color: blue;
+    margin: 10px 10px 10px 10px;
+}
+
+#mainblock {
+    height: 300px;
+    background-color: green;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#UVline {
+    margin-left: 0px;
+}
+
+#UV {
+    border-radius: 10px;
+    background-color: rebeccapurple;
+    padding: 15px;
+    margin: 5px 17px 5px 17px;
+}
+
+#fiveday {
+    background-color: orange;
+    margin: 10px 10px 10px 10px;
+}
+
+.forecast-card {
+    height:200px;
+    width: 150px;
+    border-radius: 5px;
+    background-color: orchid;
+    margin: 5px 17px 5px 17px;
+}
