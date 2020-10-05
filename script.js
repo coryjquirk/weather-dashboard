@@ -60,17 +60,20 @@ function renderWeather(){
           $("#UV").text(uvIndex);
           setUVColor();
           function setUVColor(){
-            if (5<uvIndex) {
+            if (8<uvIndex) {
               $("#UV").css({"background-color": "red"});
-            } else if (3<uvIndex && uvIndex<5) {
+            } else if (6<uvIndex && uvIndex<=8) {
+              $("#UV").css({"background-color": "orange"});
+            } else if (3<uvIndex && uvIndex<=6) {
               $("#UV").css({"background-color": "yellow"});
             } else {
               $("#UV").css({"background-color": "green"});
             }
           }
       });
-      document.querySelector("#last1").innerHTML = response.name;
+      document.querySelector(".citybox").innerHTML = response.name;
       document.querySelector("#bigcity").innerHTML = response.name + " ";
+      
       //from here, start putting each city search into local storage
       //use a for loop to plug them into #last1, #last2, etc.
       //have the #last1, #last2 retrieve cities from local storage with a delay of 1
@@ -102,12 +105,15 @@ function renderWeather(){
       var mm = dateFlipper.substr(5, 2);
       var dd = dateFlipper.substr(8, 2);
       removeZero();
+
       function removeZero() {
         var digitOne = dd.charAt(0);
         var digitTwo = dd.charAt(1);
-        if (digitOne='0'){
-          return digitTwo;
+        if (digitOne==='0'){
+          digitOne='';
+          return dd=digitOne+digitTwo
         }
+        return dd
       }
       var yyyy = dateFlipper.substr(0, 4);
       return mm+"/"+removeZero()+"/"+yyyy;
