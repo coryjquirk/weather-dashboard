@@ -74,6 +74,19 @@ function renderWeather(){
       document.querySelector(".citybox").innerHTML = response.name;
       document.querySelector("#bigcity").innerHTML = response.name + " ";
       
+      newHistory();
+
+      function newHistory() {
+        $("#searchicon").click(function(){
+          console.log("clicker")
+          var newBtn = document.createElement("BUTTON")
+          newBtn.setAttribute('class', 'citybox');
+          newBtn.innerHTML = response.name;
+          var cityList = document.getElementById("citylist");
+          cityList.appendChild(newBtn);
+        })
+      }
+
       //from here, start putting each city search into local storage
       //use a for loop to plug them into #last1, #last2, etc.
       //have the #last1, #last2 retrieve cities from local storage with a delay of 1
