@@ -6,9 +6,11 @@
     <title>Weather Dashboard</title>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- ajax -->
@@ -29,33 +31,35 @@
       <div class="row">
         <div class="col-md-4" id="citycolumn">
           <h2>
-              Search for a city:
+              Search for a city: 
           </h2>
-          <input id="citysearch">
+          <input id="citysearch"><button onclick="renderWeather()" id="searchicon" class="glyphicon glyphicon-search btn btn-light save10"> </button>
+
           <br>
           <br>
             <div id="citylist">
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
-                <p id="cityboxes">List of last searched</p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
+                <p class="citybox"><text class="last"></textarea></p>
             </div>
         </div>
   
         <div class="col" id="rightside">
           <div class="row" id="mainblock">
             <div class="col">
-                <h2>Bujumbura <text id="clockbox"></text></h2>
+                <h2><text id="bigcity"></text><text id="clockbox"></text></h2>
+
                 <p class="tempF"></p>
                 <p class="humidity"></p>
                 <p class="wind"></p>
                 <!--color will indicate favorable, moderate, or severe-->
                 <div id="UVline">
-                    <p>UV Index: <text id=UV></text></p>
+                    <p>UV Index: <text id="UV"></text></p>
                 </div>
                 <!-- this for UV index? https://openweathermap.org/api/uvi#current -->
             </div>    
@@ -66,28 +70,28 @@
             <div class="row">
                 <div class="forecast-card">
                     <h2 id="fc-dt1"></h2>
-                    <p id="fc-temp1">Temp: xx</p>
-                    <p id="fc-humid1">Humidity: xx</p>
+                    <p id="fc-temp1">Temp: </p>
+                    <p id="fc-humid1">Humidity: </p>
                 </div>
                 <div class="forecast-card">
                     <h2 id="fc-dt2"></h2>
-                    <p id="fc-temp2">Temp: xx</p>
-                    <p id="fc-humid2">Humidity: xx</p>
+                    <p id="fc-temp2">Temp: </p>
+                    <p id="fc-humid2">Humidity: </p>
                 </div>
                 <div class="forecast-card">
                     <h2 id="fc-dt3"></h2>
-                    <p id="fc-temp3">Temp: xx</p>
-                    <p id="fc-humid3">Humidity: xx</p>
+                    <p id="fc-temp3">Temp: </p>
+                    <p id="fc-humid3">Humidity: </p>
                 </div>
                 <div class="forecast-card">
                     <h2 id="fc-dt4"></h2>
-                    <p id="fc-temp4">Temp: xx</p>
-                    <p id="fc-humid4">Humidity: xx</p>
+                    <p id="fc-temp4">Temp: </p>
+                    <p id="fc-humid4">Humidity: </p>
                 </div>
                 <div class="forecast-card">
                     <h2 id="fc-dt5"></h2>
-                    <p id="fc-temp5">Temp: xx</p>
-                    <p id="fc-humid5">Humidity: xx</p>
+                    <p id="fc-temp5">Temp: </p>
+                    <p id="fc-humid5">Humidity: </p>
                 </div>
             </div>
           </div>
