@@ -73,6 +73,11 @@ function renderWeather(){
       });
       document.querySelector(".citybox").innerHTML = response.name;
       document.querySelector("#bigcity").innerHTML = response.name + " ";
+      var mainIcon = 'https://openweathermap.org/img/wn/' + response.weather[0].icon + '.png';
+      console.log("here's the icon link " + mainIcon);
+      $("#mainIcon").empty();
+      $("#mainIcon").append("<img src=" + mainIcon + ">");
+
       
       newHistory();
 
@@ -107,6 +112,7 @@ function renderWeather(){
     // Log the resulting object
     console.log(response);
     //pull temp & convert from K to F
+
     function pullTemp(listIndex) {
       tempF = (response.list[listIndex].main.temp - 273.15) *1.80 + 32;
       return tempF
@@ -142,7 +148,11 @@ function renderWeather(){
     //toFixed(2) trims it to 2 decimal places
     for(i = 0; i < 5; i++) {
       var dateid = "#fc-temp" + (i + 1);
+      var smallIcon = 'https://openweathermap.org/img/wn/' + response.list[5+8*i].weather[0].icon + '.png';
+      console.log("here's the lil icon " + smallIcon)
       $(dateid).text("Temp: " + pullTemp(5+8*i).toFixed(2) + " °F");
+      console.log("#smallIcon" + (i + 1));
+      $("#smallIcon" + (i + 1)).prepend("<img src=" + smallIcon + ">");
     } 
     //add forecast humidity to html
     //`"#fc-humid" + (i + 1)` runs through all 5 HTML humidity divs
