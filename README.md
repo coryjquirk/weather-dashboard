@@ -14,7 +14,7 @@ A simple weather app to display current weather conditions and a 5-day forecast.
 * Mobile responsive: page adapts to the size of a browser window.
 
 ## Links
-* Depolyed application: https://coryjquirk.github.io/weather-dashboard/index.html
+* Deployed application: https://coryjquirk.github.io/weather-dashboard/index.html
 * Repository: https://github.com/coryjquirk/weather-dashboard
 
 ### Screenshot
