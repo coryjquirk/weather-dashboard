@@ -90,7 +90,7 @@ function renderWeather(){
       $(".wind").text("Wind speed: " + (response.wind.speed*2.236936).toFixed(1) + " MPH"); //m per sec to mph
       var lon = response.coord.lon;
       var lat = response.coord.lat;
-      var queryURL3 = "http://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
+      var queryURL3 = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
       $.ajax({
         url: queryURL3,
         method: "GET"
