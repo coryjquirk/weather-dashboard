@@ -1,5 +1,6 @@
 .header {
     height: 100px;
+    width: 100%;
     background-color: rgb(53, 53, 53);
     margin: -8px;
 }
@@ -14,12 +15,14 @@
 
 /* working w divs */
 .container {
-    margin: 0px 0px 0px 0px;
     max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: pink; */
 }
 
 #citycolumn {
-    background-color: rgb(233, 176, 176);
+    background-color: rgb(218, 218, 218);
     margin: 10px 10px 10px 10px;
 }
 
@@ -56,13 +59,13 @@
 
 
 #rightside {
-    background-color: blue;
+    background-color: white;
     margin: 10px 10px 10px 10px;
 }
 
 #mainblock {
     height: 300px;
-    background-color: violet;
+    background-color: white;
     margin: 10px 10px 10px 10px;
     border: 1px solid black;
     border-radius: 5px;
@@ -79,7 +82,7 @@
 }
 
 #fiveday {
-    background-color: orange;
+    background-color: white;
     margin: 10px 10px 10px 10px;
 }
 
@@ -87,6 +90,56 @@
     height:200px;
     width: 150px;
     border-radius: 5px;
-    background-color: orchid;
+    background-color: rgb(34, 130, 255);
     margin: 5px 17px 5px 17px;
+}
+
+
+@media screen and (max-width: 928px) {
+    .header {
+        width: 100%;
+    }
+    .container {
+        width: 100%;
+    }
+    #title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+    }
+    #title {
+        font-size: 37px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100%;
+    }
+    #title {
+        font-size: 37px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .header {
+        width: 100%;
+    }
+    #title {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header {
+        width: 100%;
+        height: 63px;
+    }
+    #title {
+        font-size: 12px;
+    }
 }

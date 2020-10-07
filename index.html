@@ -29,7 +29,7 @@
 
 <div class="container">
       <div class="row">
-        <div class="col-md-4" id="citycolumn">
+        <div class="col-md-3" id="citycolumn">
           <h2>
               Search for a city: 
           </h2>
@@ -37,9 +37,7 @@
 
           <br>
           <br>
-            <div id="citylist">
-                <button class="citybox" placeholder="history"><text id="last1"></textarea></button>
-            </div>
+          <p>recent cities go here</p>
         </div>
   
         <div class="col" id="rightside">
@@ -47,14 +45,12 @@
             <div class="col">
                 <h2><text id="bigcity"></text><text id="clockbox"></text><text id=mainIcon></text></h2>
 
-                <p class="tempF"></p>
-                <p class="humidity"></p>
-                <p class="wind"></p>
-                <!--color will indicate favorable, moderate, or severe-->
+                <p class="tempF">Temperature: </p>
+                <p class="humidity">Humidity: </p>
+                <p class="wind">Wind Speed: </p>
                 <div id="UVline">
                     <p>UV Index: <text id="UV"></text></p>
                 </div>
-                <!-- this for UV index? https://openweathermap.org/api/uvi#current -->
             </div>    
         </div>
 
@@ -98,9 +94,7 @@
     </div>
   </div>
 
-<!-- my javascript -->
 <script src="script.js"></script>
-
 </body>
 
 </html>
