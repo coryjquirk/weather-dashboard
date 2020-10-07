@@ -15,10 +15,10 @@
 
 /* working w divs */
 .container {
+    width: 100%;
     max-width: none;
     margin-left: auto;
     margin-right: auto;
-    /* background-color: pink; */
 }
 
 #citycolumn {
