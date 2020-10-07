@@ -1,7 +1,66 @@
-function getCity() {
+var cities = ["History:"]
+localStorage.setItem("cities", cities)
+console.log(localStorage)
+
+function displayCityInfo() {
+  var city = $(this).attr("data-name");
+  var APIKey = "9ba884c10ca90d0ca1f8f0ec657c12b7"
+  var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
+  $.ajax({
+    url: queryURL1,
+    method: "GET"
+  }).then(function(response) {
+    console.log(JSON.stringify(response));
+  });
+}
+
+function renderButtons() {
+  $("#history").empty();
+  for (var i = 0; i < cities.length; i++) {
+    var a = $("<button>");
+    a.addClass("city");
+    a.attr("data-name", cities[i]);
+    a.text(cities[i]);
+    $("#history").append(a);
+  }
+}
+
+var cityID;
+function firstButton() {
+  var APIKey = "9ba884c10ca90d0ca1f8f0ec657c12b7"
+  var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch() + "&appid=" + APIKey;
+  $.ajax({
+    url: queryURL1,
+    method: "GET"
+  }).then(function(response) {
+    cities.push(response.name);
+    localStorage.setItem("cities", cities)
+    var a = $("<button>");
+    a.addClass("city");
+    a.attr('id', 'cityBtn');
+    a.attr('name', response.name);
+    a.attr("data-name", response.name);
+    a.text(response.name);
+    $("#history").append(a);
+    $(document).on("click", ".city", btnToBar);
+    function btnToBar() {
+      var cityID = document.querySelector("#cityBtn");
+      document.querySelector("#citysearch").value = cityID.getAttribute('name');
+      renderWeather();
+      document.getElementById('citysearch').value = ''
+    }
+    return cityID
+  });
+  // Adding the city from the textbox to our array
+  console.log(cities);
+  console.log(localStorage)
+};
+function citySearch() {
   var city = document.querySelector("#citysearch").value;
   return city;
 }
+
+
 GetClock();
 function GetClock(){
   var d=new Date();
@@ -9,11 +68,14 @@ function GetClock(){
   var clocktext=""+(nmonth+1)+"/"+ndate+"/"+nyear+"";
   document.getElementById('clockbox').innerHTML=clocktext;
 }
+
+
 function renderWeather(){
+  document.querySelector("#citysearch").innerHTML = "";
   setInterval(GetClock,1000);
   var APIKey = "9ba884c10ca90d0ca1f8f0ec657c12b7"
-  var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + getCity() + "&appid=" + APIKey;
-  var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + getCity() + "&appid=" + APIKey;
+  var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch() + "&appid=" + APIKey;
+  var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch() + "&appid=" + APIKey;
   
   $.ajax({
       url: queryURL1,
@@ -23,7 +85,6 @@ function renderWeather(){
   .then(function(response) {
     var tempF = (response.main.temp - 273.15) * 1.80 + 32;
       $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
-      $(".city").html("<h1>" + response.name + " Weather Details</h1>");
       $(".tempF").text("Temperature: " + tempF.toFixed(2) + " °F");
       $(".humidity").text("Humidity: " + response.main.humidity + "%");
       $(".wind").text("Wind speed: " + (response.wind.speed*2.236936).toFixed(1) + " MPH"); //m per sec to mph
@@ -103,3 +164,6 @@ function renderWeather(){
     }
   });
 }
+
+// Calling the renderButtons function to display the initial buttons
+renderButtons();

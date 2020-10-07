@@ -33,21 +33,24 @@
           <h2>
               Search for a city: 
           </h2>
-          <input id="citysearch"><button onclick="renderWeather()" id="searchicon" class="glyphicon glyphicon-search btn btn-light save10"> </button>
+          <input id="citysearch"><button id="searchicon" onclick="firstButton(); renderWeather(); document.getElementById('citysearch').value = ''" class="glyphicon glyphicon-search btn btn-light save10"> </button>
 
           <br>
           <br>
-          <p>recent cities go here</p>
+          <div id="history">recent cities go here</div>
         </div>
   
         <div class="col" id="rightside">
           <div class="row" id="mainblock">
             <div class="col">
                 <h2><text id="bigcity"></text><text id="clockbox"></text><text id=mainIcon></text></h2>
-
+                <br>
                 <p class="tempF">Temperature: </p>
+                <br>
                 <p class="humidity">Humidity: </p>
+                <br>
                 <p class="wind">Wind Speed: </p>
+                <br>
                 <div id="UVline">
                     <p>UV Index: <text id="UV"></text></p>
                 </div>
@@ -58,31 +61,31 @@
             <h1>5-Day Forecast:</h1>
             <div class="row">
                 <div class="forecast-card">
-                    <h2 id="fc-dt1"></h2>
+                    <h3 id="fc-dt1"></h3>
                     <text id="smallIcon1"></text>
                     <p id="fc-temp1">Temp: </p>
                     <p id="fc-humid1">Humidity: </p>
                 </div>
                 <div class="forecast-card">
-                    <h2 id="fc-dt2"></h2>
+                    <h3 id="fc-dt2"></h3>
                     <text id="smallIcon2"></text>
                     <p id="fc-temp2">Temp: </p>
                     <p id="fc-humid2">Humidity: </p>
                 </div>
                 <div class="forecast-card">
-                    <h2 id="fc-dt3"></h2>
+                    <h3 id="fc-dt3"></h3>
                     <text id="smallIcon3"></text>
                     <p id="fc-temp3">Temp: </p>
                     <p id="fc-humid3">Humidity: </p>
                 </div>
                 <div class="forecast-card">
-                    <h2 id="fc-dt4"></h2>
+                    <h3 id="fc-dt4"></h3>
                     <text id="smallIcon4"></text>
                     <p id="fc-temp4">Temp: </p>
                     <p id="fc-humid4">Humidity: </p>
                 </div>
                 <div class="forecast-card">
-                    <h2 id="fc-dt5"></h2>
+                    <h3 id="fc-dt5"></h3>
                     <text id="smallIcon5"></text>
                     <p id="fc-temp5">Temp: </p>
                     <p id="fc-humid5">Humidity: </p>

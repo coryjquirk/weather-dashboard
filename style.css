@@ -46,7 +46,7 @@
     background-color: rgb(182, 238, 182);
 }
 
-.citybox {
+.city {
     height: 60px;
     width: 250px;
     padding: 15px 15px 15px 15px;
@@ -92,6 +92,7 @@
     border-radius: 5px;
     background-color: rgb(34, 130, 255);
     margin: 5px 17px 5px 17px;
+    padding: 5px;
 }
 
 
