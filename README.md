@@ -18,8 +18,8 @@ A simple weather app to display current weather conditions and a 5-day forecast.
 * Repository: https://github.com/coryjquirk/weather-dashboard
 
 ### Screenshot
-<img src="screenshot.png" alt="application screenshot">
-* https://coryjquirk.github.io/weather-dashboard/images/screenshot.png
+<img src="https://coryjquirk.github.io/weather-dashboard/screenshot.PNG" alt="application screenshot">
+* https://coryjquirk.github.io/weather-dashboard/screenshot.PNG
 
 ## Features in Development
 * Storing search history even after browser window is closed or refreshed.
