@@ -42,13 +42,14 @@ function firstButton() {
     a.attr("data-name", response.name);
     a.text(response.name);
     $("#history").append(a);
-    $(document).on("click", ".city", btnToBar);
-    function btnToBar() {
-      var cityID = document.querySelector("#cityBtn");
-      document.querySelector("#citysearch").value = cityID.getAttribute('name');
+    $(document).on('click','.city', function(event){
+      var clickedCity = (event.target.innerText);
+      console.log(clickedCity+"wwawahaw")
+      document.querySelector("#citysearch").value = clickedCity;
       renderWeather();
       document.getElementById('citysearch').value = ''
-    }
+    })
+
     return cityID
   });
   // Adding the city from the textbox to our array
@@ -77,6 +78,23 @@ function renderWeather(){
   var queryURL1 = "https://api.openweathermap.org/data/2.5/weather?q=" + citySearch() + "&appid=" + APIKey;
   var queryURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch() + "&appid=" + APIKey;
   
+  function urlExists(queryURL1, callback) {
+    fetch(queryURL1, { method: 'head' })
+    .then(function(status) {
+      callback(status.ok)
+    });
+  }
+  
+  let url = 'https://mapsengine.google.com/map/embed?mid=zGLD-nMIJQAg.k0gTyNlOPz_Q';
+  
+  urlExists(queryURL1, function(exists) {
+    if (exists) {
+      return // it exists, do something
+    } else {
+      alert("Try a different city or spelling.")// it doesn't exist, do something else
+    }
+  });
+
   $.ajax({
       url: queryURL1,
       method: "GET"
