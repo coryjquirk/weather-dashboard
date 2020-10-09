@@ -90,7 +90,7 @@ function renderWeather(){
     if (exists) {
       return // it exists, do something
     } else {
-      alert("Try a different city or spelling.")// it doesn't exist, do something else
+      alert("Try a different city or spelling.")
     }
   });
 
