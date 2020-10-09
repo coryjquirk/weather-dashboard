@@ -1,5 +1,4 @@
-var cities = ["History:"]
-localStorage.setItem("cities", cities)
+// localStorage.setItem("test", "test")
 console.log(localStorage)
 
 function displayCityInfo() {
@@ -16,11 +15,11 @@ function displayCityInfo() {
 
 function renderButtons() {
   $("#history").empty();
-  for (var i = 0; i < cities.length; i++) {
+  for (var i = 0; i < localStorage.length; i++) {
     var a = $("<button>");
     a.addClass("city");
-    a.attr("data-name", cities[i]);
-    a.text(cities[i]);
+    a.attr("data-name", localStorage.getItem("lastcity"+[i]));
+    a.text(localStorage.getItem("lastcity"+[i]));
     $("#history").append(a);
   }
 }
@@ -33,8 +32,17 @@ function firstButton() {
     url: queryURL1,
     method: "GET"
   }).then(function(response) {
-    cities.push(response.name);
-    localStorage.setItem("cities", cities)
+    lastCity();
+    function lastCity(){
+      var i = localStorage.length;
+      $(document).on('click','#searchicon', function(){
+        i++
+        console.log(i + "testabitch")
+      })
+
+      localStorage.setItem("lastcity"+[i], response.name)
+      // console.log(i + "testabitch2")
+    }
     var a = $("<button>");
     a.addClass("city");
     a.attr('id', 'cityBtn');
@@ -42,18 +50,9 @@ function firstButton() {
     a.attr("data-name", response.name);
     a.text(response.name);
     $("#history").append(a);
-    $(document).on('click','.city', function(event){
-      var clickedCity = (event.target.innerText);
-      console.log(clickedCity+"wwawahaw")
-      document.querySelector("#citysearch").value = clickedCity;
-      renderWeather();
-      document.getElementById('citysearch').value = ''
-    })
-
     return cityID
   });
   // Adding the city from the textbox to our array
-  console.log(cities);
   console.log(localStorage)
 };
 function citySearch() {
@@ -185,3 +184,11 @@ function renderWeather(){
 
 // Calling the renderButtons function to display the initial buttons
 renderButtons();
+
+$(document).on('click','.city', function(event){
+  var clickedCity = (event.target.innerText);
+  console.log(clickedCity+"wwawahaw")
+  document.querySelector("#citysearch").value = clickedCity;
+  renderWeather();
+  document.getElementById('citysearch').value = ''
+})
