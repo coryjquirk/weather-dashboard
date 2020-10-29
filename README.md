@@ -1,6 +1,10 @@
 # Weather Dashboard
 A simple weather app to display current weather conditions and a 5-day forecast.
 
+## Links
+* Deployed application: https://coryjquirk.github.io/weather-dashboard/index.html
+* Repository: https://github.com/coryjquirk/weather-dashboard
+
 ## Usage
 * Search for the city you wish to see weather for. 
 * The program will save your searches in a list displayed on the left.
@@ -12,10 +16,6 @@ A simple weather app to display current weather conditions and a 5-day forecast.
 * Updates with new dates each day.
 * UV Index is color coded green-yellow-orange-red to indicate favorable to unfavorable conditions.
 * Mobile responsive: page adapts to the size of a browser window.
-
-## Links
-* Deployed application: https://coryjquirk.github.io/weather-dashboard/index.html
-* Repository: https://github.com/coryjquirk/weather-dashboard
 
 ### Screenshot
 <img src="https://coryjquirk.github.io/weather-dashboard/screenshot.PNG" alt="application screenshot">
