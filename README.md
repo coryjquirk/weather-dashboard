@@ -3,7 +3,7 @@ A simple weather app to display current weather conditions and a 5-day forecast.
 
 ## Links
 * Deployed application: https://coryjquirk.github.io/weather-dashboard/index.html
-* Repository: https://github.com/coryjquirk/weather-dashboard
+* Repository: [https://github.com/coryjquirk/weather-dashboard](https://github.com/coryjquirk/weather-dashboard)
 
 ## Usage
 * Search for the city you wish to see weather for. 
