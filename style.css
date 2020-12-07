@@ -113,23 +113,20 @@
     background: rgb(61, 61, 61);
     color: white;
     width: 30px;
-  }
-
-  a {
+}
+a {
     text-decoration: none;
     color: rgb(175, 175, 175);
     border-radius: 7px;
     padding: 2px;
-  }
-  a:hover {
-    background-color: rgb(34, 130, 255);
-    ;
-  }
-  .footer p {
+}
+a:hover {
+    background-color: rgb(34, 130, 255);;
+}
+.footer p {
     background-color: rgb(61, 61, 61);
     margin-top: 15px;
-  }
-
+}
 
 @media screen and (max-width: 928px) {
     .header {
