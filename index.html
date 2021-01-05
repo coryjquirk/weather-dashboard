@@ -18,21 +18,22 @@
     <!-- my stylesheet -->
     <link rel = "stylesheet" type = "text/css" href = "style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+  </head>
 
 <body>    
 
-<div class="row header">
-    
-    <h id="title">Weather Dashboard</h>
-
+<div class="header">
+    <img src="img/header.png" alt="header txt"/>
 </div>
 
 <div class="container">
       <div class="row">
         <div class="col-md-2" id="citycolumn">
           <h2>
-              Search for a city: 
+              City search: 
           </h2>
           <input id="citysearch"><button id="searchicon" onclick="firstButton(); renderWeather(); document.getElementById('citysearch').value = ''" class="glyphicon glyphicon-search btn btn-light save10"> </button>
 
@@ -41,8 +42,8 @@
           <div id="history"></div>
         </div>
   
-        <div class="col" id="rightside">
-          <div class="row" id="mainblock">
+        <div id="rightside">
+          <div id="mainblock">
             <div class="col">
                 <h2><text id="bigcity"></text><text id="clockbox"></text><text id=mainIcon></text></h2>
                 <br>
@@ -57,35 +58,34 @@
                 </div>
             </div>    
         </div>
-
           <div class="col" id="fiveday">
             <h1>5-Day Forecast:</h1>
             <div class="row">
-                <div class="forecast-card">
+                <div class="forecastCard">
                     <h3 id="fc-dt1"></h3>
                     <text id="smallIcon1"></text>
                     <p id="fc-temp1">Temp: </p>
                     <p id="fc-humid1">Humidity: </p>
                 </div>
-                <div class="forecast-card">
+                <div class="forecastCard">
                     <h3 id="fc-dt2"></h3>
                     <text id="smallIcon2"></text>
                     <p id="fc-temp2">Temp: </p>
                     <p id="fc-humid2">Humidity: </p>
                 </div>
-                <div class="forecast-card">
+                <div class="forecastCard">
                     <h3 id="fc-dt3"></h3>
                     <text id="smallIcon3"></text>
                     <p id="fc-temp3">Temp: </p>
                     <p id="fc-humid3">Humidity: </p>
                 </div>
-                <div class="forecast-card">
+                <div class="forecastCard">
                     <h3 id="fc-dt4"></h3>
                     <text id="smallIcon4"></text>
                     <p id="fc-temp4">Temp: </p>
                     <p id="fc-humid4">Humidity: </p>
                 </div>
-                <div class="forecast-card">
+                <div class="forecastCard">
                     <h3 id="fc-dt5"></h3>
                     <text id="smallIcon5"></text>
                     <p id="fc-temp5">Temp: </p>
@@ -95,7 +95,11 @@
           </div>
         </div>
       </div>
+      <div id="footHero">
+        <!-- <img src="img/1.png"/> -->
+      </div>
     </div>
+    
   </div>
 
   <div class="footer">
