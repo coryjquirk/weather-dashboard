@@ -7,6 +7,9 @@ export default function Footer(){
     <p>
         <a href="https://github.com/coryjquirk/weather-dashboard">Github Repo</a><a href="https://www.github.com/coryjquirk" alt="github icon"><i class="fa fa-github"/></a>©2020 <a href="https://coryjquirk.herokuapp.com">Cory Quirk</a>
     </p>
+    {/* <div id="footHero">
+         <img src="img/1.png"/>
+      </div> */}
   </div>
     )
 }
