@@ -21,9 +21,29 @@ function renderButtons() {
     a.attr("data-name", localStorage.getItem("lastcity"+[i]));
     a.text(localStorage.getItem("lastcity"+[i]));
     $("#history").append(a);
+
+  }
+  $("#mobileHistory").empty();
+  for (var i = 0; i < localStorage.length; i++) {
+    var a = $("<button>");
+    a.addClass("mobileCity");
+    a.attr("data-name", localStorage.getItem("lastcity"+[i]));
+    a.text(localStorage.getItem("lastcity"+[i]));
+    $("#mobileHistory").append(a);
+
   }
 }
 
+//NEED TO MAKE SURE THIS WORKS CORRECTLY FIRST
+// $("#citysearch").keyup(function(event) {
+//   if (event.keyCode === 13) {
+//       $("#searchicon").click();
+//   }
+// });
+
+$("#myButton").click(function() {
+alert("Button code executed.");
+});
 var cityID;
 function firstButton() {
   var APIKey = "9ba884c10ca90d0ca1f8f0ec657c12b7"
@@ -37,11 +57,9 @@ function firstButton() {
       var i = localStorage.length;
       $(document).on('click','#searchicon', function(){
         i++
-        console.log(i + "testabitch")
       })
 
       localStorage.setItem("lastcity"+[i], response.name)
-      // console.log(i + "testabitch2")
     }
     var a = $("<button>");
     a.addClass("city");
@@ -50,6 +68,7 @@ function firstButton() {
     a.attr("data-name", response.name);
     a.text(response.name);
     $("#history").append(a);
+    $("#mobileHistory").append(a);
     return cityID
   });
   // Adding the city from the textbox to our array
@@ -90,7 +109,7 @@ function renderWeather(){
     if (exists) {
       return // it exists, do something
     } else {
-      alert("Try a different city or spelling.")
+      alert("Sorry, try a different spelling or a new city.")
     }
   });
 
@@ -187,7 +206,6 @@ renderButtons();
 
 $(document).on('click','.city', function(event){
   var clickedCity = (event.target.innerText);
-  console.log(clickedCity+"wwawahaw")
   document.querySelector("#citysearch").value = clickedCity;
   renderWeather();
   document.getElementById('citysearch').value = ''

@@ -6,7 +6,7 @@
 .header {
   height: 100px;
   width: 100%;
-  background-color: #8b4c8b;
+  background-color: #655E95;
   font-family: "Roboto Slab", serif;
   text-align: center;
 }
@@ -25,19 +25,27 @@
   margin-left: auto;
   margin-right: auto;
 }
-#citycolumn {
+#desktopCityColumn {
   background-color: #dadada;
   margin: 10px 10px 10px 10px;
   padding: 0px 0px 10px 10px;
 }
+#desktopCityColumn p{
+  font-size: small;
+  margin: 5px 5px 5px 8px;
+}
+#mobileHistoryDiv {
+display: none;
+margin: 0px 0px 15px 15px}
+
 #citysearch {
-  border-radius: 5px;
   border: 1px solid black;
   height: 35px;
-  width: 75%;
+  width: 70%;
+  margin: 5px 5px 5px 8px;
 }
 #searchicon {
-  background-color: skyblue;
+  background-color: #68A2B0;
   border-radius: 10px;
   padding: 7px 10px 7px 10px;
   margin: 5px 17px 5px 5px;
@@ -48,24 +56,37 @@
   border: 1px solid black;
 }
 .city {
-font-size: medium;
-font-weight: bold;
-  height: 60px;
-  width: 75%;
-  margin: 0px 0px 8px 0px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 100%;
+  margin: 2px 0px 2px 0px;
   padding: 15px 15px 15px 15px;
-  background-color: #cfffff;
-  border-radius: 5px;
+  background-color: #5398b3 ;
   border: 1px none black;
   clear: left;
 /* -webkit-box-shadow: 5px 5px 0px 0px #000000, 10px 10px 0px 0px #FFFFFF;  */
 box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
 }
 .city:active{
-    background-color: #9ce9e9;
+    background-color: #3b6f8d;
     transform: translateY(2px);
 }
-
+.mobileCity {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 40px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: #5398b3 ;
+  clear: left;
+}
+.mobileCity:active{
+    background-color: #3b6f8d;
+    transform: translateY(2px);
+}
 #rightside {
   margin: 10px 10px 10px 10px;
 }
@@ -91,10 +112,9 @@ box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
   height: 200px;
   width: 150px;
   border-radius: 5px;
-  margin: 5px 17px 5px 17px;
+  margin: 5px 17px 15px 17px;
   padding: 5px 0px 10px 10px;
-
-  background-image: url("texture/dust.png");
+  background-image: url("https://www.transparenttextures.com/patterns/dust.png");
   background-color: rgba(255, 249, 249, 0.5);
   background-blend-mode: lighten;
 
@@ -105,7 +125,7 @@ box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
     1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
     1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
 }
-#footHero img{
+#footHero{
     width: 100%;
     max-width: 900px;
     margin: 0px 0px 50px 0px;
@@ -119,7 +139,6 @@ box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
   background-color: rgb(61, 61, 61);
   color: rgb(175, 175, 175);
   text-align: center;
-  color: rgb(175, 175, 175);
 }
 .fa-github {
   background: rgb(61, 61, 61);
@@ -132,14 +151,25 @@ a {
   border-radius: 3px;
   padding: 3px 1px 3px 1px;
 }
-a:hover {
-  background-color: rgb(170, 207, 255);
+.footer a:hover, .footer i:hover {
+  background-color: #68A2B0;
+}
+.footer p {
+  background-color: none;
+  margin-top: 15px;
 }
 .footer p {
   background-color: rgb(61, 61, 61);
   margin-top: 15px;
 }
-
+@media screen and (max-width: 1179px){
+  #mobileHistoryDiv{
+    display: block;
+  }
+  #desktopHistory{
+    display: none;
+  }
+}
 @media screen and (max-width: 928px) {
   .header {
     width: 100%;
@@ -155,11 +185,32 @@ a:hover {
   .header img {
     width: 85%;
   }
-
+  .forecastCard {
+    color: rgb(0, 0, 0);
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 5px 17px 5px 17px;
+    padding: 5px 0px 10px 10px;
+    background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+    background-color: rgba(255, 249, 249, 0.5);
+    background-blend-mode: lighten;
+  
+    -webkit-box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
+    1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
+    1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
+    box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
+      1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
+      1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
+  }
 }
 @media screen and (max-width: 600px) {
     .header img {
         width: 100%;
+      }
+      .forecastCard {
+        margin: 5px 17px 15px 17px;
+
       }
 }
 @media screen and (max-width: 360px) {
