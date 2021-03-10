@@ -1,0 +1,41 @@
+#citycolumn {
+    background-color: #96C1B1;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 0px 10px 10px;
+    max-width: 300px;
+  }
+  #citysearch {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 35px;
+    width: 75%;
+  }
+#searchicon {
+    background-color: #68A2B0;
+    border-radius: 10px;
+    padding: 7px 10px 7px 10px;
+    margin: 5px 17px 5px 5px;
+  }
+  #citylist {
+    border-radius: 5px;
+    width: 250px;
+    border: 1px solid black;
+  }
+.city {
+    font-size: medium;
+    font-weight: bold;
+    height: 60px;
+    width: 75%;
+    margin: 0px 0px 8px 0px;
+    padding: 15px 15px 15px 15px;
+    background-color: #417492;
+    border-radius: 5px;
+    border: 1px none black;
+    /* -webkit-box-shadow: 5px 5px 0px 0px #000000, 10px 10px 0px 0px #FFFFFF;  */
+    box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #ffffff;
+  }
+  .city:active {
+    background-color: #3b6f8d;
+    transform: translateY(2px);
+  }
+  

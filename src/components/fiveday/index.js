@@ -3,9 +3,9 @@ import './style.css';
 
 export default function Fiveday(){
     return(
-    <div class="col" id="fiveday">
+    <div id="fiveday">
             <h1>5-Day Forecast:</h1>
-            <div class="row">
+            <div>
                 <div class="forecastCard">
                     <h3 id="fc-dt1"></h3>
                     <text id="smallIcon1"></text>

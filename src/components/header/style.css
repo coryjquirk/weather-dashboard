@@ -1,0 +1,12 @@
+.header {
+    height: 100px;
+    width: 100%;
+    background-color: #655E95;
+    font-family: "Roboto Slab", serif;
+    text-align: center;
+  }
+  .header img {
+    width: 60%;
+    max-width: 750px;
+    padding: 10px 10px 10px 10px;
+  }
