@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weather-dashboard/static/css/main.94040cd6.chunk.css",
+    "main.js": "/weather-dashboard/static/js/main.b5319be3.chunk.js",
+    "main.js.map": "/weather-dashboard/static/js/main.b5319be3.chunk.js.map",
+    "runtime-main.js": "/weather-dashboard/static/js/runtime-main.953c5635.js",
+    "runtime-main.js.map": "/weather-dashboard/static/js/runtime-main.953c5635.js.map",
+    "static/js/2.a6c0ddb4.chunk.js": "/weather-dashboard/static/js/2.a6c0ddb4.chunk.js",
+    "static/js/2.a6c0ddb4.chunk.js.map": "/weather-dashboard/static/js/2.a6c0ddb4.chunk.js.map",
+    "static/js/3.64538d46.chunk.js": "/weather-dashboard/static/js/3.64538d46.chunk.js",
+    "static/js/3.64538d46.chunk.js.map": "/weather-dashboard/static/js/3.64538d46.chunk.js.map",
+    "index.html": "/weather-dashboard/index.html",
+    "static/css/main.94040cd6.chunk.css.map": "/weather-dashboard/static/css/main.94040cd6.chunk.css.map",
+    "static/js/2.a6c0ddb4.chunk.js.LICENSE.txt": "/weather-dashboard/static/js/2.a6c0ddb4.chunk.js.LICENSE.txt",
+    "static/media/header.c331cb6c.png": "/weather-dashboard/static/media/header.c331cb6c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.953c5635.js",
+    "static/js/2.a6c0ddb4.chunk.js",
+    "static/css/main.94040cd6.chunk.css",
+    "static/js/main.b5319be3.chunk.js"
+  ]
+}
