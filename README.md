@@ -34,4 +34,4 @@ A stripped down weather app to display current weather conditions and a 5-day fo
 * The Unlicense
 
 ## Thank You
-* [Owen Höglund](https://github.com/Othedough) for helping me streamline and refactor the JavaScript.
+* [Owen Höglund](https://github.com/Othedough) for helping me streamline and refactor the JavaScript, specifically the way API responses were being passed to the DOM.
