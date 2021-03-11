@@ -10,6 +10,9 @@ A stripped down weather app to display current weather conditions and a 5-day fo
 * JavaScript
 * Bootstrap & Bootstrap Grid
 * Local storage
+* PWA
+  * service-worker.js
+  * manifest.webmanifest
 * OpenWeather for all weather data and weather icons (https://openweathermap.org/)
 * Date generator: (https://www.ricocheting.com/code/javascript/html-generator/date-time-clock)
 
