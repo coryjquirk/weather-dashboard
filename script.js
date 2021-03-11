@@ -1,3 +1,20 @@
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
 // localStorage.setItem("test", "test")
 console.log(localStorage)
 
@@ -26,7 +43,7 @@ function renderButtons() {
   $("#mobileHistory").empty();
   for (var i = 0; i < localStorage.length; i++) {
     var a = $("<button>");
-    a.addClass("mobileCity");
+    a.addClass("city");
     a.attr("data-name", localStorage.getItem("lastcity"+[i]));
     a.text(localStorage.getItem("lastcity"+[i]));
     $("#mobileHistory").append(a);

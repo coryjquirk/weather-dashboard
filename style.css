@@ -1,51 +1,72 @@
-.container{
-    background-image: url("texture/snow.png");
-    background-color: rgba(255,255,255,0.6);
-    background-blend-mode: lighten;
+/* https://www.schemecolor.com/from-a-glass-window.php */
+/* purple: 655E95
+beige: F4E7AC
+aqua: 96C1B1
+lite blue: 68A2B0
+deep blue: 417492 */
+.container {
+  background-image: url("texture/snow.png");
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+#bigcity, #clockbox, #fiveday h2{
+  font-size: 20px;
 }
 .header {
   height: 100px;
   width: 100%;
-  background-color: #655E95;
+  background-color: #655e95;
   font-family: "Roboto Slab", serif;
   text-align: center;
+  z-index: 1;
 }
 .header img {
   width: 60%;
   max-width: 750px;
-  padding: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
 }
 #title {
   color: rgb(255, 255, 255);
   font-size: 50px;
 }
-.container {
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
   width: 100%;
-  max-width: none;
-  margin-left: auto;
-  margin-right: auto;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .container {
+  padding-top: 102px;
 }
 #desktopCityColumn {
   background-color: #dadada;
   margin: 10px 10px 10px 10px;
   padding: 0px 0px 10px 10px;
 }
-#desktopCityColumn p{
+#desktopCityColumn p {
   font-size: small;
   margin: 5px 5px 5px 8px;
 }
 #mobileHistoryDiv {
-display: none;
-margin: 0px 0px 15px 15px}
-
+  /* display: none; */
+  margin: 0px 0px 15px 15px;
+}
+#citySearchLabel {
+  font-size: 20px;
+}
 #citysearch {
   border: 1px solid black;
   height: 35px;
-  width: 70%;
+  width: 160px;
   margin: 5px 5px 5px 8px;
 }
 #searchicon {
-  background-color: #68A2B0;
+  background-color: #68a2b0;
   border-radius: 10px;
   padding: 7px 10px 7px 10px;
   margin: 5px 17px 5px 5px;
@@ -60,17 +81,18 @@ margin: 0px 0px 15px 15px}
   font-family: Arial, Helvetica, sans-serif;
   height: 40px;
   width: 100%;
-  margin: 2px 0px 2px 0px;
+  margin: 3px 0px 5px 0px;
   padding: 15px 15px 15px 15px;
-  background-color: #5398b3 ;
+  background-color: #5398b3;
   border: 1px none black;
   clear: left;
-/* -webkit-box-shadow: 5px 5px 0px 0px #000000, 10px 10px 0px 0px #FFFFFF;  */
-box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
+  display: block;
+  /* -webkit-box-shadow: 5px 5px 0px 0px #000000, 10px 10px 0px 0px #FFFFFF;  */
+  box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #ffffff;
 }
-.city:active{
-    background-color: #3b6f8d;
-    transform: translateY(2px);
+.city:active {
+  background-color: #3b6f8d;
+  transform: translateY(2px);
 }
 .mobileCity {
   color: white;
@@ -80,18 +102,15 @@ box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
   border: none;
   text-align: center;
   text-decoration: none;
-  background-color: #5398b3 ;
+  background-color: #5398b3;
   clear: left;
 }
-.mobileCity:active{
-    background-color: #3b6f8d;
-    transform: translateY(2px);
-}
-#rightside {
-  margin: 10px 10px 10px 10px;
+.mobileCity:active {
+  background-color: #3b6f8d;
+  transform: translateY(2px);
 }
 #mainblock {
-  height: 300px;
+  height: 275px;
   margin: 10px 10px 10px 10px;
   border: 1px solid black;
   border-radius: 5px;
@@ -118,17 +137,17 @@ box-shadow: 3px 3px 0px 0px #000000, 5px 5px 0px 0px #FFFFFF;
   background-color: rgba(255, 249, 249, 0.5);
   background-blend-mode: lighten;
 
-  -webkit-box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
-  1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
-  1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
-  box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
-    1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
-    1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
+  -webkit-box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
+    1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba, 1px -1px 3px 3px #c2cbff,
+    0px 0px 2px 4px #c1a7ff;
+  box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
+    1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba, 1px -1px 3px 3px #c2cbff,
+    0px 0px 2px 4px #c1a7ff;
 }
-#footHero{
-    width: 100%;
-    max-width: 900px;
-    margin: 0px 0px 50px 0px;
+#footHero {
+  width: 100%;
+  max-width: 900px;
+  margin: 0px 0px 50px 0px;
 }
 .footer {
   position: fixed;
@@ -151,8 +170,9 @@ a {
   border-radius: 3px;
   padding: 3px 1px 3px 1px;
 }
-.footer a:hover, .footer i:hover {
-  background-color: #68A2B0;
+.footer a:hover,
+.footer i:hover {
+  background-color: #68a2b0;
 }
 .footer p {
   background-color: none;
@@ -162,12 +182,15 @@ a {
   background-color: rgb(61, 61, 61);
   margin-top: 15px;
 }
-@media screen and (max-width: 1179px){
-  #mobileHistoryDiv{
+@media screen and (max-width: 1242px) {
+  #mobileHistoryDiv {
     display: block;
   }
-  #desktopHistory{
+  #desktopHistory {
     display: none;
+  }
+  #desktopCityColumn {
+    width: 100%;
   }
 }
 @media screen and (max-width: 928px) {
@@ -183,38 +206,41 @@ a {
 }
 @media screen and (max-width: 768px) {
   .header img {
+    margin: 20px 10px 10px 10px;
     width: 85%;
   }
   .forecastCard {
     color: rgb(0, 0, 0);
     height: 200px;
-    width: 100%;
+    width: 66%;
     border-radius: 5px;
     margin: 5px 17px 5px 17px;
     padding: 5px 0px 10px 10px;
     background-image: url("https://www.transparenttextures.com/patterns/dust.png");
     background-color: rgba(255, 249, 249, 0.5);
     background-blend-mode: lighten;
-  
-    -webkit-box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
-    1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
-    1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
-    box-shadow: -1px -1px 3px 2px #FEBCC2, 1px -1px 3px 2px #FFD8B6,
-      1px 1px 3px 2px #FDFEC9, -1px 1px 3px 2px #C7FCBA,
-      1px -1px 3px 3px #C2CBFF, 0px 0px 2px 4px #C1A7FF;
+
+    -webkit-box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
+      1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba,
+      1px -1px 3px 3px #c2cbff, 0px 0px 2px 4px #c1a7ff;
+    box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
+      1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba,
+      1px -1px 3px 3px #c2cbff, 0px 0px 2px 4px #c1a7ff;
   }
 }
 @media screen and (max-width: 600px) {
-    .header img {
-        width: 100%;
-      }
-      .forecastCard {
-        margin: 5px 17px 15px 17px;
-
-      }
+  .header img {
+    margin: 25px 10px 10px 10px;
+    width: 90%;
+  }
+  .forecastCard {
+    margin: 5px 17px 15px 17px;
+  }
 }
-@media screen and (max-width: 360px) {
-    .header img {
-        width: 100%;
-      }
+@media screen and (max-width: 400px) {
+  .header img {
+    margin: 30px 10px 10px 10px;
+  }
+#mainblock{  height: 315px;
+}
 }
