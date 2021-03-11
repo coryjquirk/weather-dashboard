@@ -18,9 +18,15 @@ A simple weather app to display current weather conditions and a 5-day forecast.
 * Mobile responsive: page adapts to the size of a browser window.
 
 ## Features in Development
-* Celcius and Kelvin unit conversion
-* Search by zip code
-* Map integration
+* PWA - installable app
+* React.js framework
+* Function:
+  * C/Kelvin unit conversion
+  * Search by postal code
+  * Map integration
+* Front-end design:
+  * Dark mode
+  * Further weather condition-based design 
 
 ## Installation
 None needed, it runs right in your browser.
@@ -28,7 +34,7 @@ None needed, it runs right in your browser.
 ## Tools Used
 * JavaScript
 * Bootstrap
-* Local storage
+* Local storage (city search history)
 * OpenWeather for all weather data and weather icons (https://openweathermap.org/)
 * Date generator: (https://www.ricocheting.com/code/javascript/html-generator/date-time-clock)
 
@@ -36,4 +42,4 @@ None needed, it runs right in your browser.
 * The Unlicense
 
 ## Thank You
-* Owen Höglund for helping streamline and refactor the JavaScript logic.
+* [Owen Höglund](https://github.com/Othedough) for helping me streamline and refactor the JavaScript.
