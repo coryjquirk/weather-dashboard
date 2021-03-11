@@ -1,8 +1,8 @@
 # Weather Dashboard
 A stripped down weather app to display current weather conditions and a 5-day forecast. Utilizes client-side storage and the [OpenWeather API](https://openweathermap.org/).
 
-* Deployed application: https://coryjquirk.github.io/weather-dashboard/index.html
-* Repository: [https://github.com/coryjquirk/weather-dashboard](https://github.com/coryjquirk/weather-dashboard)
+* [Deployed application](https://coryjquirk.github.io/weather-dashboard/index.html)
+* [Repository](https://github.com/coryjquirk/weather-dashboard)
 ### Demo
 <img src="https://coryjquirk.github.io/weather-dashboard/weatherdashboard.gif" alt="demo screencap gif">
 
