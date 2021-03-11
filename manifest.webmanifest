@@ -1,0 +1,16 @@
+{
+  "short_name": "1weather",
+  "name": "1 weather dashboard",
+  "description": "calmed weather",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "minimal-ui",
+  "theme_color": "#9993c3",
+  "background_color": "#655e95"
+}
