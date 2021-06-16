@@ -8,6 +8,7 @@ A stripped down weather app to display current weather conditions and a 5-day fo
 
 ## Tools Used
 * JavaScript
+* jQuery and AJAX
 * Bootstrap & Bootstrap Grid
 * Local storage
 * PWA
@@ -23,15 +24,15 @@ A stripped down weather app to display current weather conditions and a 5-day fo
 * Mobile responsive: page adapts to the size of a browser window.
 
 ## Features in Development
-* PWA - installable app
-* React.js framework
-* Function:
-  * C/Kelvin unit conversion
-  * Search by postal code
-  * Map integration
-* Front-end design:
-  * Dark mode
-  * Further weather condition-based design 
+* PWA - installable app  
+* Vue.js front-end framework
+* Function:  
+  * C/Kelvin unit conversion  
+  * Search by postal code  
+  * Map integration  
+* Front-end design:  
+  * Dark mode  
+  * Further weather condition-based design  
 
 ## License
 * The Unlicense
