@@ -1,154 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <!-- bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- ajax -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- my stylesheet -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <div class="header" id="myHeader">
-      <img src="img/header.png" alt="header txt" />
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- my stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet" />
+</head>
 
-    <div class="container">
-      <div class="row">
-        <div id="desktopCityColumn">
-          <h2 id="citySearchLabel">city search:</h2>
-          <p>no state/country needed.</p>
-          <p>try "osaka", "st. petersburg", or "wilkes-barre"</p>
-            <input id="citysearch" type="text"/><button 
-              id="searchicon"
-              onclick="firstButton(); renderWeather(); document.getElementById('citysearch').value = ''"
-              class="glyphicon glyphicon-search btn btn-light save10"
-            ></button>
-        </div>
+<body>
+  <div class="header" id="myHeader">
+    <img src="img/header.png" alt="header txt" />
+  </div>
 
-        <div id="rightside">
-          <div id="mainblock">
-            <div class="col">
-              <h2>
-                <text id="bigcity"></text><text id="clockbox"></text
-                ><text id="mainIcon"></text>
-              </h2>
-              <p class="tempF">Temperature:</p>
-              <p class="humidity">Humidity:</p>
-              <p class="wind">Wind Speed:</p>
-              <br />
-              <div id="UVline">
-                <p>UV Index: <text id="UV"></text></p>
-              </div>
+  <div class="container">
+    <div class="row">
+      <img id="hero" />
+      <div id="desktopCityColumn">
+        <h2 id="citySearchLabel">city search:</h2>
+        <p>no state/country needed.</p>
+        <p>try "osaka", "st. petersburg", or "wilkes-barre"</p>
+          <input id="citysearch" type="text" />
+          <button id="searchicon"
+            onclick="firstButton(); renderWeather(); document.getElementById('citysearch').value = ''"
+            class="glyphicon glyphicon-search btn btn-light save10"></button>
+      </div>
+
+      <div id="rightside">
+        <div id="mainblock">
+          <div class="col">
+            <h2>
+              <text id="bigcity"></text><text id="clockbox"></text><text id="mainIcon"></text>
+            </h2>
+            <p class="tempF">Temperature:</p>
+            <p class="humidity">Humidity:</p>
+            <p class="wind">Wind Speed:</p>
+            <br />
+            <div id="UVline">
+              <p>UV Index: <text id="UV"></text></p>
             </div>
           </div>
-          <div class="col" id="fiveday">
-            <h2>5-Day Forecast:</h2>
-            <div class="row">
-              <div class="forecastCard">
-                <h3 id="fc-dt1"></h3>
-                <text id="smallIcon1"></text>
-                <p id="fc-temp1">Temp:</p>
-                <p id="fc-humid1">Humidity:</p>
-              </div>
-              <div class="forecastCard">
-                <h3 id="fc-dt2"></h3>
-                <text id="smallIcon2"></text>
-                <p id="fc-temp2">Temp:</p>
-                <p id="fc-humid2">Humidity:</p>
-              </div>
-              <div class="forecastCard">
-                <h3 id="fc-dt3"></h3>
-                <text id="smallIcon3"></text>
-                <p id="fc-temp3">Temp:</p>
-                <p id="fc-humid3">Humidity:</p>
-              </div>
-              <div class="forecastCard">
-                <h3 id="fc-dt4"></h3>
-                <text id="smallIcon4"></text>
-                <p id="fc-temp4">Temp:</p>
-                <p id="fc-humid4">Humidity:</p>
-              </div>
-              <div class="forecastCard">
-                <h3 id="fc-dt5"></h3>
-                <text id="smallIcon5"></text>
-                <p id="fc-temp5">Temp:</p>
-                <p id="fc-humid5">Humidity:</p>
-              </div>
+        </div>
+        <div class="col" id="fiveday">
+          <h2>5-Day Forecast:</h2>
+          <div class="row">
+            <div class="forecastCard">
+              <h3 id="fc-dt1"></h3>
+              <text id="smallIcon1"></text>
+              <p id="fc-temp1">Temp:</p>
+              <p id="fc-humid1">Humidity:</p>
+            </div>
+            <div class="forecastCard">
+              <h3 id="fc-dt2"></h3>
+              <text id="smallIcon2"></text>
+              <p id="fc-temp2">Temp:</p>
+              <p id="fc-humid2">Humidity:</p>
+            </div>
+            <div class="forecastCard">
+              <h3 id="fc-dt3"></h3>
+              <text id="smallIcon3"></text>
+              <p id="fc-temp3">Temp:</p>
+              <p id="fc-humid3">Humidity:</p>
+            </div>
+            <div class="forecastCard">
+              <h3 id="fc-dt4"></h3>
+              <text id="smallIcon4"></text>
+              <p id="fc-temp4">Temp:</p>
+              <p id="fc-humid4">Humidity:</p>
+            </div>
+            <div class="forecastCard">
+              <h3 id="fc-dt5"></h3>
+              <text id="smallIcon5"></text>
+              <p id="fc-temp5">Temp:</p>
+              <p id="fc-humid5">Humidity:</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div id="mobileHistoryDiv">
-          <h3>History:</h3>
-          <div id="mobileHistory"></div>
-        </div>
-        
-        
-      </div>
-      <div class="row">
-        <img id="footHero" src="img/1.png" />
-      </div>
     </div>
+    <div class="row">
+      <div id="mobileHistoryDiv">
+        <h3>History:</h3>
+        <div id="mobileHistory"></div>
+      </div>
 
-    <div class="footer">
-      <p>
-        <a href="https://github.com/coryjquirk/weather-dashboard">Github Repo</a
-        ><a href="https://www.github.com/coryjquirk" class="fa fa-github"></a
-        >©2020 <a href="https://coryjquirk.herokuapp.com">Cory Quirk</a>
-      </p>
+
     </div>
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-          navigator.serviceWorker.register("service-worker.js").then(reg => {
-            console.log("We found your service worker file!", reg);
-          });
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="https://github.com/coryjquirk/weather-dashboard">Github Repo</a><a
+        href="https://www.github.com/coryjquirk" class="fa fa-github"></a>©2020 <a
+        href="https://coryjquirk.herokuapp.com">Cory Quirk</a>
+    </p>
+  </div>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
         });
-      }
+      });
+    }
   </script>
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

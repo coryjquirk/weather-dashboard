@@ -13,7 +13,9 @@ deep blue: 417492 */
   margin-left: auto;
   margin-right: auto;
 }
-#bigcity, #clockbox, #fiveday h2{
+#bigcity,
+#clockbox,
+#fiveday h2 {
   font-size: 20px;
 }
 .header {
@@ -44,9 +46,13 @@ deep blue: 417492 */
   padding-top: 102px;
 }
 #desktopCityColumn {
-  background-color: #dadada;
+  background: rgb(218, 218, 218, 0.4);
   margin: 10px 10px 10px 10px;
   padding: 0px 0px 10px 10px;
+}
+#hero {
+  width: 100%;
+  max-width: 900px;
 }
 #desktopCityColumn p {
   font-size: small;
@@ -143,12 +149,7 @@ deep blue: 417492 */
   box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
     1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba, 1px -1px 3px 3px #c2cbff,
     0px 0px 2px 4px #c1a7ff;
-}
-#footHero {
-  width: 100%;
-  max-width: 900px;
-  margin: 0px 0px 50px 0px;
-}
+}x
 .footer {
   position: fixed;
   left: 0;
@@ -241,6 +242,7 @@ a {
   .header img {
     margin: 30px 10px 10px 10px;
   }
-#mainblock{  height: 315px;
-}
+  #mainblock {
+    height: 315px;
+  }
 }

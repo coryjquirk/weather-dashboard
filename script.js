@@ -1,22 +1,30 @@
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () {
-  myFunction();
+  stickyHeader();
 };
-
 // Get the header
 var header = document.getElementById("myHeader");
-
 // Get the offset position of the navbar
 var sticky = header.offsetTop;
-
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function stickyHeader() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 }
+
+const imgArray = ["img/1.png", "img/2.png", "img/3.png", "img/4.png", "img/5.png"]
+const hero = document.querySelector("#hero");
+function randomImg() {
+  let randomNum = Math.floor(Math.random() * imgArray.length);
+  let heroImg = imgArray[randomNum];
+  console.log("HERE!: " + heroImg)
+  hero.setAttribute("src", heroImg)
+}
+randomImg();
+
 // localStorage.setItem("test", "test")
 console.log(localStorage);
 
