@@ -149,13 +149,13 @@ deep blue: 417492 */
   box-shadow: -1px -1px 3px 2px #febcc2, 1px -1px 3px 2px #ffd8b6,
     1px 1px 3px 2px #fdfec9, -1px 1px 3px 2px #c7fcba, 1px -1px 3px 3px #c2cbff,
     0px 0px 2px 4px #c1a7ff;
-}x
+}
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50px;
+  height: 30px;
   background-color: rgb(61, 61, 61);
   color: rgb(175, 175, 175);
   text-align: center;
@@ -176,12 +176,7 @@ a {
   background-color: #68a2b0;
 }
 .footer p {
-  background-color: none;
-  margin-top: 15px;
-}
-.footer p {
-  background-color: rgb(61, 61, 61);
-  margin-top: 15px;
+  margin-top: 5px;
 }
 @media screen and (max-width: 1242px) {
   #mobileHistoryDiv {
